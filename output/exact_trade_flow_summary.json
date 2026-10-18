@@ -1,0 +1,43 @@
+{
+  "decoded_swaps": 491,
+  "actions": {
+    "BUY": 291,
+    "SELL": 200
+  },
+  "success_breakdown": {
+    "BUY_success": 198,
+    "BUY_failed": 93,
+    "SELL_success": 200
+  },
+  "instruction_lengths": {
+    "BUY:25": 291,
+    "SELL:24": 200
+  },
+  "trailing_values": {
+    "BUY:00": 291,
+    "SELL:": 200
+  },
+  "successful_buy_count": 198,
+  "failed_buy_count": 93,
+  "successful_sell_count": 200,
+  "sell_base_amount_matches_wallet_token_delta": 200,
+  "sell_base_amount_mismatches_wallet_token_delta": 0,
+  "buy_wallet_spend_equals_instruction_budget": 0,
+  "buy_spend_minus_instruction_budget_lamports": {
+    "15000": 171,
+    "1528840": 26,
+    "1503440": 1
+  },
+  "sell_limit_headroom_pct": {
+    "count": 200,
+    "min": 29.507269293406768,
+    "max": 1221.3678627051102,
+    "average": 66.37142594898802
+  },
+  "notes": [
+    "All token amounts use raw integer token units.",
+    "Wallet token deltas are restricted to token accounts owned by the target wallet.",
+    "SOL balance delta is kept separate from PumpSwap instruction amounts and network fee.",
+    "Sell quote reconstruction is still diagnostic; rent/account-close effects must be validated before using it as exact proceeds."
+  ]
+}
