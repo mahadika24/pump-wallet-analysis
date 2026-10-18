@@ -1,0 +1,110 @@
+{
+  "pair_fragments": 197,
+  "full_buy_full_sell_pairs": 197,
+  "unmatched_sell_count": 3,
+  "unmatched_buy_count": 1,
+  "hold_seconds": {
+    "min": 0,
+    "median": 25,
+    "p75": 53.0,
+    "p90": 103.20000000000005,
+    "max": 300
+  },
+  "return_pct": {
+    "min": -57.11017129486115,
+    "p10": -15.033950181494554,
+    "p25": -3.897941461756147,
+    "median": 1.8312726618201454,
+    "p75": 6.975887923362299,
+    "p90": 17.19309528714139,
+    "max": 89.64220553383399
+  },
+  "wins": 128,
+  "losses": 69,
+  "flat": 0,
+  "win_rate_pct": 64.9746192893401,
+  "sum_pnl_sol": 1.958313737,
+  "median_pnl_sol": 0.009156638,
+  "hold_time_buckets": {
+    "0_5": {
+      "count": 29,
+      "wins": 28,
+      "win_rate_pct": 96.55172413793103,
+      "average_return_pct": 8.151403087965212,
+      "median_return_pct": 3.3317726468205953
+    },
+    "6_15": {
+      "count": 43,
+      "wins": 33,
+      "win_rate_pct": 76.74418604651163,
+      "average_return_pct": -0.7549196360807615,
+      "median_return_pct": 2.8742963711088665
+    },
+    "16_30": {
+      "count": 33,
+      "wins": 27,
+      "win_rate_pct": 81.81818181818183,
+      "average_return_pct": 8.116179714608561,
+      "median_return_pct": 5.904740057798266
+    },
+    "31_60": {
+      "count": 47,
+      "wins": 28,
+      "win_rate_pct": 59.57446808510638,
+      "average_return_pct": 2.8599876429239037,
+      "median_return_pct": 0.5499971000869973
+    },
+    "61_120": {
+      "count": 32,
+      "wins": 9,
+      "win_rate_pct": 28.125,
+      "average_return_pct": -3.2325981033069007,
+      "median_return_pct": -4.325651930442087
+    },
+    "121_plus": {
+      "count": 13,
+      "wins": 3,
+      "win_rate_pct": 23.076923076923077,
+      "average_return_pct": -7.502856391231341,
+      "median_return_pct": -14.472163635090949
+    }
+  },
+  "unmatched_sells": [
+    {
+      "signature": "Xym354334aF72GuQmdESxG4GeREiBfyLNYUKSazj11mXaBka7sUYKDF1QvpAKmSQwSXGj4JUu6ckBikkBtkzVMQ",
+      "mint": "3qTWnJYrCCaQrWjXsdWzQNyGfhgTBvpTmBEnLrVQpump",
+      "unmatched_raw": 354972342629,
+      "block_time": 1792250559
+    },
+    {
+      "signature": "wYcBwDMkaGpUEG1keEMHcCxndSw3i1Tph6dWgUWTPoa2q8BCVXAysXJKriefE8mBMD6XQw9vn65qmjkzdia1wUX",
+      "mint": "FeSqDFg1vMsB7dsWXE3UWURwUVksJArWWWynnhgiaaQ6",
+      "unmatched_raw": 98123797527,
+      "block_time": 1792250583
+    },
+    {
+      "signature": "gzTH1j3RGkyZNiixe5rZTBeX5HYFjKg7dB8SaavXGHu4NrPPBTqoQ2qU4MHgpasAfFzX3dWADvuD5sdTfV3TjqP",
+      "mint": "2Srf6mhufzWJKZ5nniVXgwamLmDJWXPQBmddJ1MMpump",
+      "unmatched_raw": 196752883403,
+      "block_time": 1792250597
+    }
+  ],
+  "unmatched_buys": [
+    {
+      "signature": "44GFPWUGRjABWzDkFP5G6LFDNGwA4h8pmbKepMScG3coUC6xhuXhH7P83X8ZKp4D7ChwgerRuzYfLcpyWym2ZY7y",
+      "mint": "9xPPBqjSC7Xhy7YzWqSELk72UjnmakbVCWwDzML6pump",
+      "remaining_raw": 715678022832,
+      "block_time": 1792292571
+    }
+  ],
+  "methodology": [
+    "Successful trades only.",
+    "Quantity-aware FIFO matching is performed independently for each token mint.",
+    "BUY cost uses decoded PumpSwap spendable_quote_in.",
+    "BUY network transaction fee is added separately.",
+    "SELL proceeds use the target wallet native SOL balance delta.",
+    "SELL native amount before network fee is reconstructed only as a diagnostic field.",
+    "Rent and token-account creation effects are excluded from BUY trading cost.",
+    "Unmatched positions are preserved and never force-paired."
+  ]
+}
