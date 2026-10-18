@@ -1,0 +1,370 @@
+{
+  "mapped_swaps": 491,
+  "unique_pools": 38,
+  "unique_base_mints": 38,
+  "account_count_distribution": {
+    "24": 200,
+    "26": 291
+  },
+  "user_account_mismatches": 0,
+  "base_mint_validation_mismatches": 0,
+  "mints_using_multiple_pools": {},
+  "pools_mapped_to_multiple_base_mints": {},
+  "pool_details": [
+    {
+      "pool": "2qrojsGeNg99JcoeZ5afyzogMwzenVjH6ejvZFbz7xNw",
+      "transactions": 4,
+      "buys": 3,
+      "sells": 1,
+      "base_mints": [
+        "VFJudeZzRdptxmytqBTVMdmqEgJwTj5fTk9U8kDpump"
+      ]
+    },
+    {
+      "pool": "3BdA9X9RdvXVbwDUPs6JvevxHTjLBnmGBQAL7sLhKG44",
+      "transactions": 2,
+      "buys": 1,
+      "sells": 1,
+      "base_mints": [
+        "9j4xHyqfxznWZpc1LPZ9kr1rLErEcaDSJhYumRZ5pump"
+      ]
+    },
+    {
+      "pool": "4FPs26gUoW76FPfEP2ULonzpdkjVmbj2eNZfiESjYSPw",
+      "transactions": 3,
+      "buys": 2,
+      "sells": 1,
+      "base_mints": [
+        "8NL7ytqWypHtvNXUM5PZ1LA46jHyQ8E52buLv9YWRviD"
+      ]
+    },
+    {
+      "pool": "4cfSb6oVS47dAVEEhXfDTmZxsVaCGyZj1YigxTFLQsfd",
+      "transactions": 9,
+      "buys": 6,
+      "sells": 3,
+      "base_mints": [
+        "95zVNJn96PE9aEvUwgg5AWa6TTQNj9v26DrmSnQbpump"
+      ]
+    },
+    {
+      "pool": "5AkcFJCJ7ZAtNFsEsRHzED24rpNWZnrVfQvjRhEvVjro",
+      "transactions": 2,
+      "buys": 1,
+      "sells": 1,
+      "base_mints": [
+        "GEykrxsSKNtSaCzKEk9tfQLVzqQS4xmCdBGYFAEzpump"
+      ]
+    },
+    {
+      "pool": "5iFyzr1gWxoSeo2hRc4yC51YUaxei47DcRdgHiudZiRf",
+      "transactions": 2,
+      "buys": 1,
+      "sells": 1,
+      "base_mints": [
+        "APYQeQ2s1Qf1r3sRfGrL8JkA2whmQxLjstNeYpG4pump"
+      ]
+    },
+    {
+      "pool": "65SjGmeJ7YPbBbMbiWMYj7juLLZ8CncR7VGK8pjCWduP",
+      "transactions": 3,
+      "buys": 3,
+      "sells": 0,
+      "base_mints": [
+        "7tFHmjGGg8Je88XgjxVWm4Co9G7SLb85MEzLiBokWgHw"
+      ]
+    },
+    {
+      "pool": "6PoWW3poGND27f9qHEb2AJmSNNCKKjGgZYRWRSNtUyWx",
+      "transactions": 7,
+      "buys": 3,
+      "sells": 4,
+      "base_mints": [
+        "FeSqDFg1vMsB7dsWXE3UWURwUVksJArWWWynnhgiaaQ6"
+      ]
+    },
+    {
+      "pool": "6aXb1e6uTMsz77zhncRYFe7AugzBxxcUnhCodhd3odag",
+      "transactions": 14,
+      "buys": 9,
+      "sells": 5,
+      "base_mints": [
+        "3ZAnpeVBHAvZsySNMXp4g9nYaE1jsx6khgh29VYKpump"
+      ]
+    },
+    {
+      "pool": "7TEezuvfoXoDxsST4unnr5LieESu9RD7LXRqU47F1bFe",
+      "transactions": 2,
+      "buys": 1,
+      "sells": 1,
+      "base_mints": [
+        "HmqnR7WAWeZgGNF5QbcF74aTfzCAtxcgtsjTEbLHfart"
+      ]
+    },
+    {
+      "pool": "8k6BGbn2r2K8kJboVViK3Gx4KNQcH1KNpWUZXXbpByh5",
+      "transactions": 2,
+      "buys": 2,
+      "sells": 0,
+      "base_mints": [
+        "BeyAbRvdwLxZnN3uZnYbkN4FjuRXaMFqrbqJ2QrtUBNR"
+      ]
+    },
+    {
+      "pool": "8ujsp9at9YLY2CUKaeuJJgNfLo532jzEVnHDoQUbdS6z",
+      "transactions": 8,
+      "buys": 6,
+      "sells": 2,
+      "base_mints": [
+        "7Tr69PEhb3QpaD2gxPwiEaNvQ9SFJJ7V7b71nZWHpump"
+      ]
+    },
+    {
+      "pool": "9HGwPeDLTpVyKbumkofHhbNWQGm2SJdemHEPLX3rocBD",
+      "transactions": 138,
+      "buys": 79,
+      "sells": 59,
+      "base_mints": [
+        "AcV6CcpMGFrA1dhRFiCKNiVNje8QE6ZXR9ep9jh7pump"
+      ]
+    },
+    {
+      "pool": "9N6q3geEu5paiRTm3i1wZcXBafouAAn33T8Wh8Tjbtau",
+      "transactions": 9,
+      "buys": 6,
+      "sells": 3,
+      "base_mints": [
+        "2u7CppZjqGmWCLReWBHkmLtfrZWu16fNc7nw3HMopump"
+      ]
+    },
+    {
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "transactions": 69,
+      "buys": 38,
+      "sells": 31,
+      "base_mints": [
+        "2Srf6mhufzWJKZ5nniVXgwamLmDJWXPQBmddJ1MMpump"
+      ]
+    },
+    {
+      "pool": "B2ajNVWAMef1xfjSW3QDrF7qWeLB7dTBwCR6va4pMB21",
+      "transactions": 6,
+      "buys": 4,
+      "sells": 2,
+      "base_mints": [
+        "8QtbrC9d3BezyCwzBFUQbNsWJGte7ckrZ7HWcn81pump"
+      ]
+    },
+    {
+      "pool": "BCs9UKMgm5k8C64iE8iFSyocqpnGJ3w8Rz9daPRscMre",
+      "transactions": 6,
+      "buys": 3,
+      "sells": 3,
+      "base_mints": [
+        "AFqbJbqNiFfJbAYP75RFX74DHoE53UPTaodLFg2Ppump"
+      ]
+    },
+    {
+      "pool": "BQPEyRAVcqHiDV6jvabDDW3mfr9CbW18odnYNYWPshBV",
+      "transactions": 4,
+      "buys": 2,
+      "sells": 2,
+      "base_mints": [
+        "4nZTnkvtRdvzGj5NqM5Uq1WA6iBGGnT2asMFW7gKpump"
+      ]
+    },
+    {
+      "pool": "CEXh16Ug4DRAXhxk62B7qgV6Qpwfq9SHfocuSEgB6ggT",
+      "transactions": 25,
+      "buys": 15,
+      "sells": 10,
+      "base_mints": [
+        "9kXG537MZvtTBUieRvrye9KG93FbA25QAk7zf5oYpump"
+      ]
+    },
+    {
+      "pool": "CVkv1Zj4Y1YpfypLRDvB9dStR3rnVKDhn5tzNZw6d939",
+      "transactions": 4,
+      "buys": 3,
+      "sells": 1,
+      "base_mints": [
+        "HMXnAyeRnh5DE2QVpTwssDz3H8aHqnoLeTBqsLehpump"
+      ]
+    },
+    {
+      "pool": "CmmeeiUpKdhADvXAEcurnPHojQN6uzyYmgKNSue2U7Wm",
+      "transactions": 2,
+      "buys": 1,
+      "sells": 1,
+      "base_mints": [
+        "BNot1PaDzqF1pu3aQuAQuUu9rEdyhikZ6SWDoBeQpump"
+      ]
+    },
+    {
+      "pool": "CosGRxcM5kh4ERgzBgnWW5CoNFufJJF9mLWid1hW8y9b",
+      "transactions": 2,
+      "buys": 2,
+      "sells": 0,
+      "base_mints": [
+        "9xPPBqjSC7Xhy7YzWqSELk72UjnmakbVCWwDzML6pump"
+      ]
+    },
+    {
+      "pool": "CpivNK6XNVCYPqUuYsAQQMaTWazGpGqoQPieohukQgLM",
+      "transactions": 3,
+      "buys": 2,
+      "sells": 1,
+      "base_mints": [
+        "ut9QdSaJ6yEVwZC3EWCj65bMH4tcevTw1pheGB7pump"
+      ]
+    },
+    {
+      "pool": "D33WVFVQkax4UDrfLF5ZyrG2VMYajZdWKaByhRxhfY1U",
+      "transactions": 3,
+      "buys": 3,
+      "sells": 0,
+      "base_mints": [
+        "EW9ezwtqvn3v8RpdKMEQai8n5bmajUiPnC4UBV7zpump"
+      ]
+    },
+    {
+      "pool": "D6G4BRfHuGYsTkPCBkmuEqesND7gJuGzdCzeNicATtmy",
+      "transactions": 4,
+      "buys": 3,
+      "sells": 1,
+      "base_mints": [
+        "3XEqNHe3jHTRWAZCTHbb1UwpSfNbJL9oU1ErsM86pump"
+      ]
+    },
+    {
+      "pool": "DTL4stVt6U8wotT2Do5uv9iSGYv4ndUoe12nLZu5ibSR",
+      "transactions": 8,
+      "buys": 5,
+      "sells": 3,
+      "base_mints": [
+        "wiben7BURMAbyWyHrSD7bsBV1Svr7cQaJ9rPmu9SPu4"
+      ]
+    },
+    {
+      "pool": "EdrwX6G4JqWzHHCU82b1Ezg5Zbg3g6V9DtZfvz68ng4d",
+      "transactions": 4,
+      "buys": 2,
+      "sells": 2,
+      "base_mints": [
+        "G2Pgndfc8DAQyiy1p6n1iNXfrVgx6ihm1szHqG9Vpump"
+      ]
+    },
+    {
+      "pool": "Em6RvzGXhd35pZ7CVUjCTPEnv4jAztScaVHaXBXCBcG7",
+      "transactions": 1,
+      "buys": 1,
+      "sells": 0,
+      "base_mints": [
+        "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump"
+      ]
+    },
+    {
+      "pool": "FexrJJVqENvYFBFuyXYxrUQTnNy8VNJQDVtvU9pFewAC",
+      "transactions": 2,
+      "buys": 1,
+      "sells": 1,
+      "base_mints": [
+        "bojvJb3cEwN7Kizx1LpkgcbWSdkbE4uP71tpnGapump"
+      ]
+    },
+    {
+      "pool": "Ffh2wCSHeerCDDScPXbpgaib9k87UbjqGqmyFyqxQC7w",
+      "transactions": 19,
+      "buys": 11,
+      "sells": 8,
+      "base_mints": [
+        "3qTWnJYrCCaQrWjXsdWzQNyGfhgTBvpTmBEnLrVQpump"
+      ]
+    },
+    {
+      "pool": "Fk5MuGv2H3Qpt6AxdhS2KHgDL2os424BvfEoqFNTdv9Y",
+      "transactions": 2,
+      "buys": 1,
+      "sells": 1,
+      "base_mints": [
+        "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump"
+      ]
+    },
+    {
+      "pool": "GTVVP8RhRfiVsQuBbfLFWJ5kjLo9ESsHJq31RpvERgoZ",
+      "transactions": 4,
+      "buys": 2,
+      "sells": 2,
+      "base_mints": [
+        "2ToDyk3tzSc3x8BECvrEq33ZdEHutc3iXUzvsgJVnJo9"
+      ]
+    },
+    {
+      "pool": "GywHnQoABFBuWLKmggeiKfbQiSVieAN6sY7Z72vnomtW",
+      "transactions": 18,
+      "buys": 13,
+      "sells": 5,
+      "base_mints": [
+        "EYLjBuEd7NUF5ZwjcpawqCKnzbaZMDsyHkeA72P2pump"
+      ]
+    },
+    {
+      "pool": "HMBWEQ9zRYjD8fT9qaqq36FTNpcCCEbiMpcFiSiqYJjV",
+      "transactions": 2,
+      "buys": 1,
+      "sells": 1,
+      "base_mints": [
+        "diFQehTovhwQv74vgcLoUXvcXWrMyvLqY2xfkQPpump"
+      ]
+    },
+    {
+      "pool": "HeHoBxWtLhLqAu1Jd8GnDZujhVevyiAvMsvCr7LzrsoM",
+      "transactions": 85,
+      "buys": 44,
+      "sells": 41,
+      "base_mints": [
+        "81a4zMdXnAPCkH3NkE5nYXms56E2qWcrRmxuB9TTpump"
+      ]
+    },
+    {
+      "pool": "HtLc5pyosAzMTiLTbtRsX4jnFShvhJ51FAJq2hd7KpGc",
+      "transactions": 8,
+      "buys": 8,
+      "sells": 0,
+      "base_mints": [
+        "DfBJCoLnaF75GaKPWB4c3TFyMHcXmAShiuWm3dHNpump"
+      ]
+    },
+    {
+      "pool": "HwGZaGWemZdeTAa3KV2S2vXjhwdyYt1XB3ahkX6fJ7BL",
+      "transactions": 2,
+      "buys": 1,
+      "sells": 1,
+      "base_mints": [
+        "CoT33Da5knLB4iCWW6mLsjzTL3m9sgpz3ay9tUj4pump"
+      ]
+    },
+    {
+      "pool": "x7m4HZj2mWHF3mRbug54AQ4Zn8SH8G9w3VYfuqG6WAE",
+      "transactions": 3,
+      "buys": 2,
+      "sells": 1,
+      "base_mints": [
+        "ByCsUXz2aGsbiJDfW53X7YoRNJAsGhxKUX4jiL7Bpump"
+      ]
+    }
+  ],
+  "mapping_assumption": {
+    "account_0": "pool",
+    "account_1": "user",
+    "account_2": "global_config",
+    "account_3": "base_mint",
+    "account_4": "quote_mint",
+    "account_5": "user_base_token_account",
+    "account_6": "user_quote_token_account",
+    "account_7": "pool_base_token_account",
+    "account_8": "pool_quote_token_account",
+    "account_9": "protocol_fee_recipient",
+    "account_10": "protocol_fee_recipient_token_account"
+  }
+}
