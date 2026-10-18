@@ -1,0 +1,35 @@
+{
+  "total_buy_attempts": 291,
+  "decoded_buy_exact_quote_in": 291,
+  "successful_decoded": 198,
+  "failed_decoded": 93,
+  "decode_coverage_pct": 100.0,
+  "discriminator_counts": {
+    "c62e1552b4d9e870": 291
+  },
+  "instruction_length_counts": {
+    "25": 291
+  },
+  "spendable_quote_in_counts": {
+    "500000000": 288,
+    "397338738": 1,
+    "492624989": 1,
+    "320243185": 1
+  },
+  "trailing_hex_counts": {
+    "00": 291
+  },
+  "success_headroom_pct": {
+    "count": 198,
+    "min": 0.012145174222377023,
+    "max": 119.42980082658386,
+    "average": 2.0442817898824464
+  },
+  "failed_with_left_log": 93,
+  "failed_with_right_log": 93,
+  "notes": [
+    "spendable_quote_in and min_base_amount_out are decoded directly from PumpSwap instruction.",
+    "actual_token_out_raw_estimate is currently derived from successful post/pre token balance changes.",
+    "Left/Right log values are preserved without assigning semantics yet."
+  ]
+}
