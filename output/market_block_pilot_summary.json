@@ -1,0 +1,40 @@
+{
+  "input": "data/market_block_candidates.jsonl",
+  "block_records": 290,
+  "roundtrip_entries": 197,
+  "time_span": {
+    "min_block_time": 1792250551,
+    "max_block_time": 1792250616,
+    "seconds": 65
+  },
+  "status_counts": {
+    "ok": 290
+  },
+  "candidate_transactions": {
+    "total": 10168,
+    "unique_signatures": 10168,
+    "touching_pumpswap": 10168,
+    "not_touching_pumpswap": 0
+  },
+  "entry_coverage": {
+    "buy_block_present": 3,
+    "buy_block_missing": 194,
+    "coverage_pct": 1.5228426395939088,
+    "bot_buy_signature_present": 3,
+    "bot_buy_signature_missing": 194,
+    "bot_buy_signature_coverage_pct": 1.5228426395939088
+  },
+  "top_pools_by_candidate_count": [
+    {
+      "pool": "Ffh2wCSHeerCDDScPXbpgaib9k87UbjqGqmyFyqxQC7w",
+      "candidate_count": 9767
+    },
+    {
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "candidate_count": 401
+    }
+  ],
+  "pump_program_presence": {
+    "yes": 10168
+  }
+}
