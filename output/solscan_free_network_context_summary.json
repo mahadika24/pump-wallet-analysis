@@ -1,0 +1,23 @@
+{
+  "source": "Solscan Free Network Analytics",
+  "api_base": "https://public-api.solscan.io",
+  "roundtrip_entries": 197,
+  "api_requests": 5,
+  "date_range": {
+    "from": "20261017",
+    "to": "20261018"
+  },
+  "datasets": {
+    "transactions": 1,
+    "fees": 1,
+    "slots": 1,
+    "dex": 1,
+    "compute_units": 1
+  },
+  "limitations": [
+    "Data is network-wide daily aggregate.",
+    "Not pool-specific.",
+    "Not token-specific.",
+    "Not transaction-level market microstructure."
+  ]
+}
