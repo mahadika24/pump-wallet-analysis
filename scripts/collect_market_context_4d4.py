@@ -1,207 +1,163 @@
-import os, csv, json, time, urllib.request, urllib.parse
+import os,csv,json,time,urllib.request,urllib.parse
 
-API = "https://pro-api.solscan.io/playground/account/transactions/enhanced"
-KEY = os.getenv("SOLSCAN_API_KEY")
-PUMP = "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA"
+API="https://pro-api.solscan.io/playground/account/transactions/enhanced"
+KEY=os.getenv("SOLSCAN_API_KEY")
+PUMP="pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA"
+BUY=bytes.fromhex("c62e1552b4d9e870")
+SELL=bytes.fromhex("33e685a4017f83ad")
 
-BUY = bytes.fromhex("c62e1552b4d9e870")
-SELL = bytes.fromhex("33e685a4017f83ad")
-
-MAX_ROUNDTRIPS = 10
-MAX_PAGES = 5
-
+MAX_RT=10
+MAX_PAGES=5
+OUT="data/market_context_4d4c.jsonl"
 
 def b58(s):
-    chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
-    n = 0
-    for c in s:
-        n = n * 58 + chars.index(c)
-    raw = n.to_bytes((n.bit_length() + 7) // 8, "big") if n else b""
-    return b"\0" * (len(s) - len(s.lstrip("1"))) + raw
+    abc="123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+    n=0
+    for c in s:n=n*58+abc.index(c)
+    x=n.to_bytes((n.bit_length()+7)//8,"big") if n else b""
+    return b"\0"*(len(s)-len(s.lstrip("1")))+x
 
+def load(p):
+    with open(p,newline="") as f:return list(csv.DictReader(f))
 
-def load(path):
-    with open(path, newline="") as f:
-        return list(csv.DictReader(f))
+if not KEY:raise SystemExit("SOLSCAN_API_KEY tidak ditemukan")
 
+rt=load("output/roundtrips.csv")
+pm=load("output/pumpswap_pools.csv")
+poolmap={x["signature"]:x["pool"] for x in pm}
 
-roundtrips = load("output/roundtrips.csv")
-pool_rows = load("output/pumpswap_pools.csv")
-pools = {r["signature"]: r["pool"] for r in pool_rows}
+seen=set()
+summary=[]
 
-os.makedirs("data", exist_ok=True)
-os.makedirs("output", exist_ok=True)
-
-out = "data/market_context_4d4.jsonl"
-summary = []
-
-if not KEY:
-    raise SystemExit("SOLSCAN_API_KEY tidak ditemukan. Jalankan: source ~/.bashrc")
-
-
-for num, r in enumerate(roundtrips[:MAX_ROUNDTRIPS], 1):
-
-    buy_sig = r["buy_signature"]
-    sell_sig = r["sell_signature"]
-    buy_slot = int(r["buy_slot"])
-    sell_slot = int(r["sell_slot"])
-    pool = pools.get(buy_sig)
-
+for num,r in enumerate(rt[:MAX_RT],1):
+    pool=poolmap.get(r["buy_signature"])
     if not pool:
-        print(f"[{num}/{MAX_ROUNDTRIPS}] POOL TIDAK DITEMUKAN")
+        print(f"[{num}] pool missing")
         continue
 
-    start = buy_slot - 85
-    end = sell_slot
-    cursor = None
-    pages = 0
-    swaps = 0
+    buy_sig=r["buy_signature"]
+    sell_sig=r["sell_signature"]
+    bs=int(r["buy_slot"])
+    ss=int(r["sell_slot"])
 
-    print(f"[{num}/{MAX_ROUNDTRIPS}] {start} -> {end}")
+    start=bs-85
+    end=ss
+    cursor=None
+    pages=swaps=0
+    retries=0
 
-    while pages < MAX_PAGES:
+    print(f"[{num}/{MAX_RT}] {start}->{end}")
 
-        params = {
-            "address": pool,
-            "program[]": PUMP,
-            "from_slot": start,
-            "to_slot": end,
-            "limit": 40
+    while pages<MAX_PAGES:
+        q={
+            "address":pool,
+            "program[]":PUMP,
+            "from_slot":start,
+            "to_slot":end,
+            "limit":40
         }
+        if cursor:q["cursor"]=cursor
 
-        if cursor:
-            params["cursor"] = cursor
+        url=API+"?"+urllib.parse.urlencode(q,doseq=True)
 
-        url = API + "?" + urllib.parse.urlencode(params, doseq=True)
+        try:
+            req=urllib.request.Request(
+                url,
+                headers={"accept":"application/json","token":KEY}
+            )
+            with urllib.request.urlopen(req,timeout=30) as z:
+                data=json.loads(z.read())
+            retries=0
 
-        success = False
+        except Exception as e:
+            retries+=1
+            print(f"  429/error {retries}/3:",str(e)[:45])
 
-        for attempt in range(3):
-            try:
-                req = urllib.request.Request(
-                    url,
-                    headers={
-                        "accept": "application/json",
-                        "token": KEY
-                    }
-                )
+            if retries>=3:
+                print("  SKIP roundtrip")
+                break
 
-                with urllib.request.urlopen(req, timeout=30) as response:
-                    data = json.loads(response.read())
+            time.sleep(30*retries)
+            continue
 
-                if data.get("success"):
-                    success = True
-                    break
-
-            except Exception as e:
-                if attempt == 2:
-                    print("  request gagal:", str(e)[:80])
-                time.sleep(2)
-
-        if not success:
+        if not data.get("success"):
+            print("  API error")
             break
 
-        txs = data.get("data", {}).get("transactions", [])
+        txs=data.get("data",{}).get("transactions",[])
+        if not txs:break
 
-        if not txs:
-            break
-
-        with open(out, "a") as f:
-
+        with open(OUT,"a") as f:
             for tx in txs:
+                sigs=tx.get("transaction",{}).get("signatures",[])
+                if not sigs:continue
 
-                slot = int(tx.get("slot", 0))
-                transaction = tx.get("transaction", {})
-                message = transaction.get("message", {})
-                signature_list = transaction.get("signatures", [])
+                sig=sigs[0]
+                if sig in (buy_sig,sell_sig):continue
 
-                if not signature_list:
-                    continue
+                msg=tx.get("transaction",{}).get("message",{})
+                signer=""
 
-                signature = signature_list[0]
-
-                signer = ""
-                for account in message.get("accountKeys", []):
-                    if account.get("signer"):
-                        signer = account.get("pubkey", "")
+                for a in msg.get("accountKeys",[]):
+                    if a.get("signer"):
+                        signer=a.get("pubkey","")
                         break
 
-                for ix in message.get("instructions", []):
+                for ix in msg.get("instructions",[]):
+                    if ix.get("programId")!=PUMP:continue
 
-                    if ix.get("programId") != PUMP:
-                        continue
+                    raw=b58(ix.get("data",""))
 
-                    raw = b58(ix.get("data", ""))
-
-                    if raw[:8] == BUY:
-                        side = "BUY"
-                    elif raw[:8] == SELL:
-                        side = "SELL"
+                    if raw[:8]==BUY:
+                        side="BUY"
+                    elif raw[:8]==SELL:
+                        side="SELL"
                     else:
                         continue
 
-                    if signature in (buy_sig, sell_sig):
-                        continue
+                    key=(num,sig,side)
+                    if key in seen:continue
+                    seen.add(key)
 
-                    record = {
-                        "roundtrip": num,
-                        "bot_buy": buy_sig,
-                        "bot_sell": sell_sig,
-                        "pool": pool,
-                        "slot": slot,
-                        "signature": signature,
-                        "signer": signer,
-                        "side": side,
-                        "distance_from_buy": slot - buy_slot
+                    rec={
+                        "roundtrip":num,
+                        "pool":pool,
+                        "slot":int(tx.get("slot",0)),
+                        "signature":sig,
+                        "signer":signer,
+                        "side":side,
+                        "distance_from_buy":int(tx.get("slot",0))-bs
                     }
 
-                    if side == "BUY" and len(raw) >= 24:
-                        record["quote_in"] = int.from_bytes(
-                            raw[8:16], "little"
-                        )
-                        record["min_base_out"] = int.from_bytes(
-                            raw[16:24], "little"
-                        )
+                    if side=="BUY" and len(raw)>=24:
+                        rec["quote_in"]=int.from_bytes(raw[8:16],"little")
+                        rec["min_base_out"]=int.from_bytes(raw[16:24],"little")
 
-                    elif side == "SELL" and len(raw) >= 24:
-                        record["base_in"] = int.from_bytes(
-                            raw[8:16], "little"
-                        )
-                        record["min_quote_out"] = int.from_bytes(
-                            raw[16:24], "little"
-                        )
+                    if side=="SELL" and len(raw)>=24:
+                        rec["base_in"]=int.from_bytes(raw[8:16],"little")
+                        rec["min_quote_out"]=int.from_bytes(raw[16:24],"little")
 
-                    f.write(json.dumps(record) + "\n")
-                    swaps += 1
+                    f.write(json.dumps(rec)+"\n")
+                    swaps+=1
 
-        pages += 1
-        cursor = data.get("data", {}).get("next")
+        pages+=1
+        cursor=data.get("data",{}).get("next")
 
-        if not cursor:
-            break
+        if not cursor:break
+        time.sleep(5)
 
-        time.sleep(0.6)
-
-    print(f"  pages={pages} market_swaps={swaps}")
+    print(f"  pages={pages} swaps={swaps}")
 
     summary.append({
-        "roundtrip": num,
-        "buy_signature": buy_sig,
-        "sell_signature": sell_sig,
-        "pool": pool,
-        "pages": pages,
-        "market_swaps": swaps
+        "roundtrip":num,
+        "pool":pool,
+        "pages":pages,
+        "market_swaps":swaps
     })
 
+    time.sleep(20)
 
-with open("output/market_context_4d4_summary.json", "w") as f:
-    json.dump({
-        "phase": "4D.4",
-        "max_roundtrips": MAX_ROUNDTRIPS,
-        "results": summary
-    }, f, indent=2)
+with open("output/market_context_4d4c_summary.json","w") as f:
+    json.dump({"phase":"4D.4c","results":summary},f,indent=2)
 
-print()
 print("DONE")
-print("Data: data/market_context_4d4.jsonl")
-print("Summary: output/market_context_4d4_summary.json")

@@ -1,0 +1,65 @@
+{
+  "phase": "4D.4c",
+  "results": [
+    {
+      "roundtrip": 1,
+      "pool": "Ffh2wCSHeerCDDScPXbpgaib9k87UbjqGqmyFyqxQC7w",
+      "pages": 1,
+      "market_swaps": 10
+    },
+    {
+      "roundtrip": 2,
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 1,
+      "market_swaps": 5
+    },
+    {
+      "roundtrip": 3,
+      "pool": "Ffh2wCSHeerCDDScPXbpgaib9k87UbjqGqmyFyqxQC7w",
+      "pages": 1,
+      "market_swaps": 9
+    },
+    {
+      "roundtrip": 4,
+      "pool": "6PoWW3poGND27f9qHEb2AJmSNNCKKjGgZYRWRSNtUyWx",
+      "pages": 1,
+      "market_swaps": 2
+    },
+    {
+      "roundtrip": 5,
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 1,
+      "market_swaps": 5
+    },
+    {
+      "roundtrip": 6,
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 1,
+      "market_swaps": 6
+    },
+    {
+      "roundtrip": 7,
+      "pool": "Ffh2wCSHeerCDDScPXbpgaib9k87UbjqGqmyFyqxQC7w",
+      "pages": 1,
+      "market_swaps": 4
+    },
+    {
+      "roundtrip": 8,
+      "pool": "6PoWW3poGND27f9qHEb2AJmSNNCKKjGgZYRWRSNtUyWx",
+      "pages": 1,
+      "market_swaps": 2
+    },
+    {
+      "roundtrip": 9,
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 1,
+      "market_swaps": 13
+    },
+    {
+      "roundtrip": 10,
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 1,
+      "market_swaps": 7
+    }
+  ]
+}
