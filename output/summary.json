@@ -1,0 +1,53 @@
+{
+  "wallet": "GRCkjXgEEWQnqveX4oWTNSZroMo4wMwx7EWZFqzZubeB",
+  "transactions": 500,
+  "actions": {
+    "BUY": 291,
+    "SELL": 200,
+    "OTHER": 9
+  },
+  "unique_token_mints": 33,
+  "pumpswap_transactions": 491,
+  "8rdf_guard_transactions": 291,
+  "guard_distance_distribution": {
+    "4": 1,
+    "5": 2,
+    "7": 1,
+    "8": 66,
+    "9": 221
+  },
+  "top_programs": [
+    [
+      "11111111111111111111111111111111",
+      500
+    ],
+    [
+      "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+      491
+    ],
+    [
+      "ComputeBudget111111111111111111111111111111",
+      491
+    ],
+    [
+      "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      491
+    ],
+    [
+      "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+      491
+    ],
+    [
+      "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+      491
+    ],
+    [
+      "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      423
+    ],
+    [
+      "8rdfF3LCRFPVhASWD8cFPpbmVvqSRXq5ZLqX7rgK2Zkd",
+      291
+    ]
+  ]
+}

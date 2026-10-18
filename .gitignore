@@ -1,0 +1,4 @@
+data/*.json
+*.zip
+__pycache__/
+*.pyc
