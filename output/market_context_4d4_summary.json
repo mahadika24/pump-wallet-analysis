@@ -1,0 +1,86 @@
+{
+  "phase": "4D.4",
+  "max_roundtrips": 10,
+  "results": [
+    {
+      "roundtrip": 1,
+      "buy_signature": "5crYhhyjzC3hmCpQ5z82k9ZrmwywmUZQXtf5dFPKfQM7CEefhFd3W8qpi3Sk9hjWnZzXbvZqAcWo871TCL7eFgA2",
+      "sell_signature": "2qdS3pCfHqwocdxsD1oaKnib7mjzb5SWNRgPGgzDkJaehDVSaXGEYRh8ffn1R89mfzUWHiLgcz4UuL4oZjkgXw9d",
+      "pool": "Ffh2wCSHeerCDDScPXbpgaib9k87UbjqGqmyFyqxQC7w",
+      "pages": 1,
+      "market_swaps": 10
+    },
+    {
+      "roundtrip": 2,
+      "buy_signature": "3zD4UtaAujBdhzCBT8YJBHMFWVt1jDy6qkBAuABoGbuxe7KEF5hYy6pX6GZxZtswK3Xf6tF1z9GBmEsF6FDtXhY8",
+      "sell_signature": "zcUhU4tCTVbuMTFkuTPtBogAH2KuP8THLvgRQxyxW12GL4FWLJKwq2FQ5QSNDuaxQ9xE6GKfE357hkSgHdFgnWi",
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 1,
+      "market_swaps": 5
+    },
+    {
+      "roundtrip": 3,
+      "buy_signature": "4isGpQPvdxV43xW1cd2vP9wNFpQFg66mdMLkzREPkfhfs4VPx91fuSe5tyN3Tnpi5QUV7Vc34wKPEsLKstw6dKJu",
+      "sell_signature": "2kxPMr3sCQoBLEWf9PoCdq3mgULCgxxQBX4yf3sD6Kd8BY4QcgPYJTPvnDsChda7MwbHWqhFwPGPGBuyPGoRyhCr",
+      "pool": "Ffh2wCSHeerCDDScPXbpgaib9k87UbjqGqmyFyqxQC7w",
+      "pages": 1,
+      "market_swaps": 9
+    },
+    {
+      "roundtrip": 4,
+      "buy_signature": "2hmEaU8PrtWpZM8szUvVC6V895tCKi5ZWpztQRUPJiSenaMUAPDMjjJ9s7CSxdtzBwCssQMvJAJPTVty7R99Jym5",
+      "sell_signature": "2xqYTJjAfTGD21YocwZ3XqtNfgSTXV2ypuE65cyeE1SiCUN4MLfya8VoLgWSw1XuC98yr15AedKToaEdm1UWcFT3",
+      "pool": "6PoWW3poGND27f9qHEb2AJmSNNCKKjGgZYRWRSNtUyWx",
+      "pages": 1,
+      "market_swaps": 2
+    },
+    {
+      "roundtrip": 5,
+      "buy_signature": "237bJhGyWaERsYhy1fXbqHsY5sN1RPqrWC64ErvaVLVQpYrETh2N79rZ1QZeZJ5q8iF6fR6zbWUSyoW9fcFbWJGN",
+      "sell_signature": "UxqE3gxFAgqvA3YP4LY4azHSL62JpeNnLYLiTVsJz7BhpkQitAgppQ3Cf7yTsE2QQUSxhvHqjujaciBpDN1qjTY",
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 1,
+      "market_swaps": 5
+    },
+    {
+      "roundtrip": 6,
+      "buy_signature": "fmU7YtwL6EEMQD12HggzdRPvJR4CEeCyovDrdSVkrCSxfBPuV2m1MogJMhtoykh4fL2bCymeu27LUcUHmnPedWP",
+      "sell_signature": "1NYYqQz5QacfVGufN3D6YhW5fCUHbB5oT3Md4wjQhvL5QBWa4kYDWHV3zmsvHzPeo8rPFzntzwzSdbG9Q6PZ33C",
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 0,
+      "market_swaps": 0
+    },
+    {
+      "roundtrip": 7,
+      "buy_signature": "5hci9CJ4jikpK4ryCmvA8LPeMJuEB1VQSKCGZM8mbr4DqCX4AiRWuh6CjDmjFs5ERkBLc5KTapRF2se3R2hpKyF1",
+      "sell_signature": "4opp7EFsg42QuYjrst24trUUr16wV57isjHrJR5uRVBGdWL3Xrxe3fuL1chNxTWhpK3yor6U7cBq9CY3yN4YqUat",
+      "pool": "Ffh2wCSHeerCDDScPXbpgaib9k87UbjqGqmyFyqxQC7w",
+      "pages": 0,
+      "market_swaps": 0
+    },
+    {
+      "roundtrip": 8,
+      "buy_signature": "54Teo815R3FQBRe2Wrbags19Eiu1EDMaZUevFiKCnB3CkNLAEJkzah7ov9tfRrgY1UuTd5mEjm5LKktsH1xEThKR",
+      "sell_signature": "217RKY5fiayXMsE1FjMuRRQzerbYWGv9xPVPaf5HE7Z6DHLTKcU6nDDGZ4vcz4ieprWh7nxC5fFs7XANnkCDa6QH",
+      "pool": "6PoWW3poGND27f9qHEb2AJmSNNCKKjGgZYRWRSNtUyWx",
+      "pages": 0,
+      "market_swaps": 0
+    },
+    {
+      "roundtrip": 9,
+      "buy_signature": "29Pm9Yr91H14ezZZdKSPyrmcxcPaYXFjbnRwyrexvCxL93L87frqaEsWv4ajqzMRYKpi5iiUdhUEzkPRp2HvBjRP",
+      "sell_signature": "33f35xw4bvoUQ7tL76quNmsA983u9trBXAtiZxSxsW7FULQsdQtRcJnN3MYWa9wh1R92LSroGEtaGD47VkU6GahB",
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 0,
+      "market_swaps": 0
+    },
+    {
+      "roundtrip": 10,
+      "buy_signature": "5nwbZWUfKPsxvwrUtFSrvY8K7gGAmmiHCr6QVDYBx7L1JEqM1ZLz5FhE2Lu7qF63yxBj6A9NgnoYwajwcsDQi2CK",
+      "sell_signature": "5gx6zGW6nRgWwrxadNMVupGM4G2Ne8nHEEN3sdicX4QsxeBBhnshXhC6g83WgVfWq8JmhfNeqk2gyPVrK4A4uXYX",
+      "pool": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "pages": 0,
+      "market_swaps": 0
+    }
+  ]
+}
